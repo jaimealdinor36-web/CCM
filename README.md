@@ -270,7 +270,6 @@
 <body>
 
     <div class="header-container">
-        <h2>CCM</h2>     
         <h3>Lista de Convidados</h3>
         <div class="counter-wrapper">
             <div class="guest-counter" id="guestCounter">Chegaram: 0 / Total: 0</div>
