@@ -202,30 +202,6 @@
             accent-color: #ff3333;
         }
 
-        tr.table-divider {
-            background: linear-gradient(90deg, #3e0a0a 0%, #161b22 100%) !important;
-        }
-
-        tr.table-divider td {
-            font-weight: bold;
-            color: #ff5252;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 13px;
-            border-top: 2px solid #d32f2f;
-            border-bottom: 2px solid #d32f2f;
-            padding: 10px 15px;
-            text-shadow: 0 0 5px rgba(255, 82, 82, 0.3);
-        }
-
-        .no-result {
-            display: none;
-            text-align: center;
-            padding: 20px;
-            color: #ff8a80;
-            font-style: italic;
-        }
-
         .footer-controls {
             text-align: center;
             margin-top: 20px;
@@ -294,7 +270,7 @@
 <body>
 
     <div class="header-container">
-        <img src="logo_CCM_responsivo (1).png" alt="Logo CCM" class="site-logo">
+        <h2>CCM</h2>     
         <h3>Lista de Convidados</h3>
         <div class="counter-wrapper">
             <div class="guest-counter" id="guestCounter">Chegaram: 0 / Total: 0</div>
@@ -303,7 +279,7 @@
 
     <div class="search-box">
         <div class="search-container">
-            <input type="text" id="searchInput" onkeyup="filterGuests()" placeholder="Pesquise pelo nome ou mesa..." autocomplete="off" autocorrect="off">
+            <input type="text" id="searchInput" onkeyup="filterGuests()" placeholder="Pesquise pelo nome..." autocomplete="off" autocorrect="off">
             <button class="clear-search" id="clearSearchBtn" onclick="clearSearch()" title="Limpar pesquisa">✕</button>
         </div>
     </div>
@@ -314,192 +290,106 @@
                 <tr>
                     <th class="checkbox-col">✓</th>
                     <th>Nome do Convidado (clique para editar)</th>
-                    <th>Mesa</th>
                 </tr>
             </thead>
             <tbody>
-                <tr class="table-divider"><td colspan="3">MESA 1 - AURORA</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Cirilo e Esposa</td><td>Mesa 1</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Francisco e Esposa</td><td>Mesa 1</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Aninhas e Esposo</td><td>Mesa 1</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Belinha e Esposo</td><td>Mesa 1</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Alberto e Odete Tsamba</td><td>Mesa 1</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Luis Niquice e Esposa</td><td>Mesa 1</td></tr>
+                <!-- Parte 1 -->
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Padre</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Catequista x 2</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Liomar e Sandra</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Emília e Ângela</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Maria A. e Angélica</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Lucília e Vitória</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Nhongo e esposa</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Madrinhos da Sónia</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Bispa Suzete e Irmã Helene</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Evangelina e Aurélia</td></tr>
 
-                <tr class="table-divider"><td colspan="3">MESA 2 - LUZ</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Augusto Miguel & Carlota Joao</td><td>Mesa 2</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Avó Cacilda & Avó Lucia</td><td>Mesa 2</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Avó Olga & Avó Tacho</td><td>Mesa 2</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Joana Portugal & Sefora Manhiça</td><td>Mesa 2</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Carlos Caetano & Antonieta Artiel</td><td>Mesa 2</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Rodrigo Alberto & Angelina Alberto</td><td>Mesa 2</td></tr>
+                <!-- Parte 2 -->
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Vovó Carolina e Combilina</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Luísa e Elvira</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Guambe e Chirime</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Issufo - Laulinda e esposo</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Bernadete e Liojino</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Dias e Emília</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Beatriz e Jorge</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Celestina e Gracianda</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">José Taimo e esposa</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Maria e Alguíseco</td></tr>
 
-                <tr class="table-divider"><td colspan="3">MESA 3 - INFINITO</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Norberto & Leónia</td><td>Mesa 3</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Ricardo & Aida</td><td>Mesa 3</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Anibal dos Anjos & Ana Amelia</td><td>Mesa 3</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Heitor Manhique e Maria Olga</td><td>Mesa 3</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Manuel Novele & Aurora Conjo</td><td>Mesa 3</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Luísa Novele</td><td>Mesa 3</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Isabel Conjo</td><td>Mesa 3</td></tr>
+                <!-- Parte 3 -->
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Pastor Eduardo e esposa</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Isabel e Pércia</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Toté e esposa Michag</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Lito e esposa</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Mito e esposa</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Esposa - Timóteo</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Filho e esposa Filomena</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Esposa - Elias</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Esposo - Gracinda</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Esposo - Guida</td></tr>
 
-                <tr class="table-divider"><td colspan="3">MESA 4 - BRILHO</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Andre da Silva & Telma da Silva</td><td>Mesa 4</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Casimiro Manhique & Nilza Manhique</td><td>Mesa 4</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Moises Mabunda & Vilma Mabunda</td><td>Mesa 4</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Platiel & Esposa</td><td>Mesa 4</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Pedro Sitoe & Olivia Sitoe</td><td>Mesa 4</td></tr>
+                <!-- Parte 4 -->
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Isabel e Fátima - 87154744</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Claudina e esposo</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Graziela e esposo</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Bernardo e esposa</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Zaida e esposo</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Fernando e esposa</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Aurora e Rosário</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Rosália Mutho e Vitónio</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Elisa e Liomar</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Lina madrinha</td></tr>
 
-                <tr class="table-divider"><td colspan="3">MESA 5 - SOL</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Manuel Saide & Delfina Cheuane</td><td>Mesa 5</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Ascencio Mandra & Lisbet Mandra</td><td>Mesa 5</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Dercio Tivane & Jessica Tivane</td><td>Mesa 5</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Edson Ngonga & Leia Ngonga</td><td>Mesa 5</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Nando & Dinha</td><td>Mesa 5</td></tr>
+                <!-- Parte 5 -->
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Nguma e esposa</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Sónia e esposo</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Mãe e esposo</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Totá e esposa</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">BiDy e esposa</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Paulo e esposa</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Nana e esposa</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">... e esposo - Jeivitual</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Rossima e filha</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">DonVila</td></tr>
 
-                <tr class="table-divider"><td colspan="3">MESA 6 - LUA</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Florinda</td><td>Mesa 6</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Raquelina</td><td>Mesa 6</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Laurinda</td><td>Mesa 6</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Suzete</td><td>Mesa 6</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Cidalia & Ramiro</td><td>Mesa 6</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Eulalia & Rosário</td><td>Mesa 6</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Esmelinda</td><td>Mesa 6</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Atalia Bule</td><td>Mesa 6</td></tr>
+                <!-- Parte 6 -->
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Wilbramo e esposa</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Xibisso e esposa</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Vanito e esposa</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Candrinho e Goinho</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Felismina / Felismata Maria do Carmo</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Diácono e marido JI</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Sasá e esposa</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Fofito e esposa</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Lili e esposo</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Adélia e esposo</td></tr>
 
-                <tr class="table-divider"><td colspan="3">MESA 7 - ESTRELA</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Adnésio & Laura</td><td>Mesa 7</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Emilton Sumbane & Andreia Conjo</td><td>Mesa 7</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Augusto & Mária</td><td>Mesa 7</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Jair & Esposa</td><td>Mesa 7</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Jóse & Carmen</td><td>Mesa 7</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Leonel & Patrícia</td><td>Mesa 7</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Mário & Emilía</td><td>Mesa 7</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Mateus & Esposa</td><td>Mesa 7</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Welson & Ezaquinha</td><td>Mesa 7</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Paulino & Nilza</td><td>Mesa 7</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Yassmin & Rafael</td><td>Mesa 7</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Sidney</td><td>Mesa 7</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Loide de Carmo Jeque</td><td>Mesa 7</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Roberto</td><td>Mesa 7</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Vanildo</td><td>Mesa 7</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Walter Manhique</td><td>Mesa 7</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">José David</td><td>Mesa 7</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Edelsinha</td><td>Mesa 7</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Amarildo</td><td>Mesa 7</td></tr>
-
-                <tr class="table-divider"><td colspan="3">MESA 8 - HARMONIA</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Acácio & Chiara</td><td>Mesa 8</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Canano & Jernita</td><td>Mesa 8</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Fidelia</td><td>Mesa 8</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Messias & Francelina</td><td>Mesa 8</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Nicolau & Cidalia</td><td>Mesa 8</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Rosa & Esposo</td><td>Mesa 8</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Wendy</td><td>Mesa 8</td></tr>
-
-                <tr class="table-divider"><td colspan="3">MESA 9 - CELESTE</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Catarina Alberto</td><td>Mesa 9</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Ricardo Damao & Amelia Damao</td><td>Mesa 9</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Roberto Mioche & Fatima Abdala</td><td>Mesa 9</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Fernado Roberto & Esposa</td><td>Mesa 9</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Rosita & Jú</td><td>Mesa 9</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Dércia & Eldourado Alberto Rodrigo</td><td>Mesa 9</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Alberto Rodrigo</td><td>Mesa 9</td></tr>
-
-                <tr class="table-divider"><td colspan="3">MESA 10 - ESPERANCA</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Adelaide e Virgilio</td><td>Mesa 10</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Sérgio Ndlaze & Tina</td><td>Mesa 10</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Márcia & Naura</td><td>Mesa 10</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Elito & Noémia</td><td>Mesa 10</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Zema</td><td>Mesa 10</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Ivan Novele</td><td>Mesa 10</td></tr>
-
-                <tr class="table-divider"><td colspan="3">MESA 11 - ALEGRIA</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Lekhisso & Keyoni</td><td>Mesa 11</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Luana & Lenya</td><td>Mesa 11</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Miguel</td><td>Mesa 11</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Nguila</td><td>Mesa 11</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Anjo</td><td>Mesa 11</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Edwin</td><td>Mesa 11</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Elton & Generosa</td><td>Mesa 11</td></tr>
-
-                <tr class="table-divider"><td colspan="3">MESA 12 - PARA SEMPRE</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Nelson Novele & Márcia Novele</td><td>Mesa 12</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Nércia Elísio & Edér Elíso</td><td>Mesa 12</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Herta</td><td>Mesa 12</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Nereid</td><td>Mesa 12</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Jéssica & Nkrumah</td><td>Mesa 12</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Karen e Hermeny</td><td>Mesa 12</td></tr>
-
-                <tr class="table-divider"><td colspan="3">MESA 13 - AMOR</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Célia Quive</td><td>Mesa 13</td></tr>
-                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Gledcy</td><td>Mesa 13</td></tr>
+                <!-- Parte 7 -->
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Langa e esposa</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">João e Vandamo</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Nelinho e esposa</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Fráscoa e esposo</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Nelito e loque</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Mozalinda e Martindha</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Castigo e esposa</td></tr>
+                <tr><td class="checkbox-col"><input type="checkbox" onchange="toggleCheck(this)"></td><td class="guest-name" contenteditable="true" onblur="saveState()" onkeydown="handleEnter(event)">Ti Jaime e esposa</td></tr>
             </tbody>
         </table>
-        <div id="noResult" class="no-result">Nenhum convidado ou mesa encontrada.</div>
     </div>
 
     <div class="footer-controls">
-        <button class="btn-reset" onclick="resetAll()">Desmarcar Todos</button>
+        <button class="btn-reset" onclick="resetList()">Limpar Todos os Cheques</button>
     </div>
 
     <script>
-        // Função para remover acentos e facilitar a busca
-        function removeAccents(str) {
-            return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+        function updateCounter() {
+            const rows = document.querySelectorAll('#guestTable tbody tr');
+            const checkedRows = document.querySelectorAll('#guestTable tbody tr.checked');
+            const counterEl = document.getElementById('guestCounter');
+            counterEl.textContent = `Chegaram: ${checkedRows.length} / Total: ${rows.length}`;
         }
 
-        // Função de Pesquisa / Filtro em Tempo Real
-        function filterGuests() {
-            const input = document.getElementById('searchInput');
-            const clearBtn = document.getElementById('clearSearchBtn');
-            const filter = removeAccents(input.value.trim());
-            const table = document.getElementById('guestTable');
-            const rows = table.querySelectorAll('tbody tr');
-            const noResult = document.getElementById('noResult');
-
-            clearBtn.style.display = filter ? 'block' : 'none';
-
-            let hasVisibleGuest = false;
-
-            rows.forEach(row => {
-                if (row.classList.contains('table-divider')) {
-                    row.style.display = 'none'; // Inicialmente esconde os divisores de mesa na busca
-                    return;
-                }
-
-                const cells = row.getElementsByTagName('td');
-                if (cells.length > 1) {
-                    const guestName = removeAccents(cells[1].textContent || cells[1].innerText);
-                    const tableName = removeAccents(cells[2].textContent || cells[2].innerText);
-
-                    if (guestName.includes(filter) || tableName.includes(filter)) {
-                        row.style.display = '';
-                        hasVisibleGuest = true;
-                    } else {
-                        row.style.display = 'none';
-                    }
-                }
-            });
-
-            // Se a busca estiver vazia, reexibe os divisores de mesa
-            if (!filter) {
-                rows.forEach(row => row.style.display = '');
-                noResult.style.display = 'none';
-            } else {
-                noResult.style.display = hasVisibleGuest ? 'none' : 'block';
-            }
-        }
-
-        // Limpar o campo de busca
-        function clearSearch() {
-            const input = document.getElementById('searchInput');
-            input.value = '';
-            filterGuests();
-            input.focus();
-        }
-
-        // Marcar / Desmarcar Presença de Convidado
         function toggleCheck(checkbox) {
             const row = checkbox.closest('tr');
             if (checkbox.checked) {
@@ -511,17 +401,36 @@
             saveState();
         }
 
-        // Atualizar Contador de Convidados
-        function updateCounter() {
+        function filterGuests() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const clearBtn = document.getElementById('clearSearchBtn');
             const table = document.getElementById('guestTable');
-            const totalRows = table.querySelectorAll('tbody tr:not(.table-divider)').length;
-            const checkedRows = table.querySelectorAll('tbody tr.checked').length;
-            const counterDiv = document.getElementById('guestCounter');
+            const rows = table.getElementsByTagName('tr');
 
-            counterDiv.textContent = `Chegaram: ${checkedRows} / Total: ${totalRows}`;
+            clearBtn.style.display = filter.length > 0 ? 'block' : 'none';
+
+            for (let i = 1; i < rows.length; i++) { // Começa em 1 para pular o cabeçalho (thead)
+                const row = rows[i];
+                const nameTd = row.querySelector('.guest-name');
+                if (nameTd) {
+                    const nameText = nameTd.textContent.toLowerCase();
+                    if (nameText.includes(filter)) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                }
+            }
         }
 
-        // Evitar quebras de linha indesejadas ao pressionar Enter na edição de nomes
+        function clearSearch() {
+            const input = document.getElementById('searchInput');
+            input.value = '';
+            filterGuests();
+            input.focus();
+        }
+
         function handleEnter(event) {
             if (event.key === 'Enter') {
                 event.preventDefault();
@@ -529,60 +438,12 @@
             }
         }
 
-        // Salvar estado atual (checkmarks e nomes editados) no LocalStorage do navegador
         function saveState() {
-            const rows = document.querySelectorAll('#guestTable tbody tr:not(.table-divider)');
-            const state = [];
-
-            rows.forEach((row, index) => {
-                const checkbox = row.querySelector('input[type="checkbox"]');
-                const guestNameCell = row.querySelector('.guest-name');
-                if (checkbox && guestNameCell) {
-                    state.push({
-                        index: index,
-                        checked: checkbox.checked,
-                        name: guestNameCell.innerText.trim()
-                    });
-                }
-            });
-
-            localStorage.setItem('ccm_guest_list_state', JSON.stringify(state));
-        }
-
-        // Carregar estado salvo do LocalStorage
-        function loadState() {
-            const savedState = localStorage.getItem('ccm_guest_list_state');
-            if (!savedState) {
-                updateCounter();
-                return;
-            }
-
-            const state = JSON.parse(savedState);
-            const rows = document.querySelectorAll('#guestTable tbody tr:not(.table-divider)');
-
-            state.forEach(item => {
-                if (rows[item.index]) {
-                    const checkbox = rows[item.index].querySelector('input[type="checkbox"]');
-                    const guestNameCell = rows[item.index].querySelector('.guest-name');
-
-                    if (checkbox) {
-                        checkbox.checked = item.checked;
-                        if (item.checked) {
-                            rows[item.index].classList.add('checked');
-                        }
-                    }
-                    if (guestNameCell && item.name) {
-                        guestNameCell.innerText = item.name;
-                    }
-                }
-            });
-
             updateCounter();
         }
 
-        // Desmarcar todos os convidados
-        function resetAll() {
-            if (confirm('Deseja realmente desmarcar a presença de todos os convidados?')) {
+        function resetList() {
+            if (confirm('Deseja realmente limpar todas as marcações de presença?')) {
                 const checkboxes = document.querySelectorAll('#guestTable input[type="checkbox"]');
                 checkboxes.forEach(cb => {
                     cb.checked = false;
@@ -593,9 +454,8 @@
             }
         }
 
-        // Inicializar a página
-        window.addEventListener('DOMContentLoaded', () => {
-            loadState();
+        document.addEventListener('DOMContentLoaded', () => {
+            updateCounter();
         });
     </script>
 </body>
